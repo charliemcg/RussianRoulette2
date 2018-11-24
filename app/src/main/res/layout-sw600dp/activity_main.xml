@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.violenthoboenterprises.russianroulette.MainActivity"
+    android:background="@color/black">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/gunbackground"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"/>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        ads:adSize="LARGE_BANNER"
+        ads:adUnitId="@string/banner_ad_unit_id"/>
+
+    <TextView
+        android:id="@+id/chamberTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="@string/chambers"
+        android:textSize="23sp"
+        android:layout_above="@+id/chamberSpinner"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="25dp"
+        android:layout_marginLeft="20dp" />
+    <Spinner
+        android:id="@+id/chamberSpinner"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:spinnerMode="dropdown"
+        android:textColor="@color/white"
+        android:layout_above="@+id/stats"
+        android:layout_alignStart="@+id/chamberTextView"
+        android:layout_alignLeft="@+id/chamberTextView"
+        android:layout_marginBottom="30dp"/>
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/chevron"
+        android:layout_alignEnd="@+id/chamberSpinner"
+        android:layout_alignBottom="@+id/chamberSpinner"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_alignRight="@+id/chamberSpinner"
+        android:layout_marginRight="5dp" />
+
+    <TextView
+        android:id="@+id/bulletTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="@string/bullets"
+        android:textSize="23sp"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@id/bulletSpinner"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp" />
+    <Spinner
+        android:id="@+id/bulletSpinner"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:spinnerMode="dropdown"
+        android:textColor="@color/white"
+        android:layout_alignTop="@+id/chamberSpinner"
+        android:layout_alignEnd="@+id/bulletTextView"
+        android:layout_above="@+id/stats"
+        android:layout_marginBottom="30dp"
+        android:layout_alignRight="@+id/bulletTextView" />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/chevron"
+        android:layout_alignEnd="@+id/bulletSpinner"
+        android:layout_alignBottom="@+id/bulletSpinner"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_alignRight="@+id/bulletSpinner"
+        android:layout_marginRight="5dp" />
+
+    <TableLayout
+        android:id="@+id/stats"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/multiPurposeButton"
+        android:layout_marginBottom="20dp">
+        <TableRow>
+            <TextView
+                android:id="@+id/chambersRemainingTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:layout_marginStart="23dp"
+                android:layout_marginLeft="23dp" />
+            <TextView
+                android:id="@+id/chambersRemainingValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:textSize="20sp"/>
+        </TableRow>
+        <TableRow
+            android:layout_weight="1">
+            <TextView
+                android:id="@+id/bulletsRemainingTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="20sp"/>
+            <TextView
+                android:id="@+id/bulletsRemainingValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:textSize="20sp"/>
+        </TableRow>
+    </TableLayout>
+
+    <Button
+        android:id="@+id/multiPurposeButton"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:background="@drawable/buttonshape"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="5dp"/>
+
+</RelativeLayout>
